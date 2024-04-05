@@ -1,0 +1,40 @@
+@use './variables' as *;
+
+@mixin content-rules {
+  margin-block: 2.25vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1.5vh;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    height: 0.625rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    border-radius: 1rem;
+  }
+}
+
+@mixin createBreakpoints($type, $map, $prop) {
+  @each $breakpoint, $value in $map {
+    @if $breakpoint < 64 {
+      @media (#{$type}: ($breakpoint + 'em')) {
+        #{$prop}: $value;
+      }
+    }
+    @else {
+      @media (#{$type}: ($breakpoint + 'em')) and (orientation: landscape) {
+        #{$prop}: $value;
+      }
+    }
+  }
+}
+
+@mixin grid-container($align: unset, $justify: unset, $flow: unset) {
+  align-content: $align;
+  display: grid;
+  grid-auto-flow: $flow;
+  justify-content: $justify;
+}

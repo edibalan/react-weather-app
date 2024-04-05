@@ -1,0 +1,52 @@
+@use 'sass:string';
+@use '../../../../utilities/variables' as *;
+@use '../../../../utilities/mixins' as *;
+@use '../../../../utilities/maps' as *;
+
+.weather__conditions .card {
+  @include grid-container(center, center);
+  background-color: $grey;
+  border-radius: 0.75rem;
+
+  // Set the aspect ratio for each card at different breakpoints
+  @each $breakpoint, $map in $conditions-card-aspect-ratio {
+    $v1: map-get($map, 'v1');
+    $v2: map-get($map, 'v2');
+
+    @media (min-width: $breakpoint) {
+      aspect-ratio: $v1 string.unquote('/') $v2;
+    }
+  }
+
+  &__content {
+    @include createBreakpoints(min-width, $conditions-card-content-width, width);
+    @include grid-container(unset, space-between, column);
+    align-items: center;
+
+    .card__header {
+      margin-top: 0.125vh;
+      
+      &, .card__label {
+        text-align: left;
+      }
+     
+      .card__label {
+        margin-bottom: 1.5vh;
+
+        // WIDTH >= 912px
+        @media (min-width: 57em) {
+          margin-bottom: 1.25vh;
+        }
+      }
+    }
+
+    .card__icon {
+      @include createBreakpoints(min-width, $conditions-card-icon-width, width);
+
+      // WIDTH >= 480px & WIDTH <= 538px
+      @media (min-width: 30em) and (max-width: 33.625em) {
+        display: none;
+      }
+    }
+  }
+}

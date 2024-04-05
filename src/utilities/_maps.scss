@@ -1,0 +1,243 @@
+// Font sizes
+$font-sizes: (
+  0: (
+    'fs-xs': 0.875rem,
+    'fs-sm': 1rem,
+    'fs-df': 1.125rem,
+    'fs-md': 1.25rem,
+    'fs-lg': 1.75rem,
+    'fs-xl': 4.375rem
+  ),
+
+  22.5em: (
+    'fs-sm': 1.0625rem,
+    'fs-df': 1.1875rem,
+    'fs-md': 1.3125rem,
+    'fs-lg': 1.875rem,
+    'fs-xl': 4.5rem
+  ),
+
+  24.3em: (
+    'fs-sm': 1.125rem,
+    'fs-df': 1.25rem,
+    'fs-md': 1.375rem,
+    'fs-lg': 2rem,
+    'fs-xl': 4.625rem
+  ),
+
+  25.75em: (
+    'fs-sm': 1.1875rem,
+    'fs-df': 1.3125rem,
+    'fs-md': 1.4375rem,
+    'fs-lg': 2.125rem,
+    'fs-xl': 4.75rem
+  ),
+
+  44.5em: (
+    'fs-xs': 1rem,
+    'fs-sm': 1.25rem,
+    'fs-df': 1.375rem,
+    'fs-md': 1.5rem,
+    'fs-lg': 2.25rem,
+    'fs-xl': 4.875rem
+  ),
+
+  48em: ( 'fs-sm': 1.3125rem ),
+  57em: ( 'fs-sm': 1.25rem ),
+ 
+  64em: (
+    'fs-xs': 0.875rem,
+    'fs-sm': 1.0625rem,
+    'fs-df': 1.1875rem,
+    'fs-md': 1.3125rem,
+    'fs-lg': 1.75rem,
+    'fs-xl': 4.375rem
+  ),
+
+  85em: (
+    'fs-sm': 1.125rem,
+    'fs-df': 1.25rem,
+    'fs-md': 1.375rem,
+  ),
+  
+  100em: (
+    'fs-xs': 0.9375rem,
+    'fs-sm': 1.1875rem,
+    'fs-df': 1.3125rem,
+    'fs-md': 1.4375rem,
+    'fs-lg': 1.875rem,
+    'fs-xl': 4.5rem
+  ),
+
+  105em: (
+    'fs-xs': 1rem,
+    'fs-sm': 1.25rem,
+    'fs-df': 1.375rem,
+    'fs-md': 1.5rem,
+    'fs-lg': 2rem,
+    'fs-xl': 4.625rem
+  ),
+
+  120em: (
+    'fs-sm': 1.3125rem,
+    'fs-df': 1.4375rem,
+    'fs-md': 1.5625rem,
+    'fs-lg': 2.125rem,
+    'fs-xl': 4.75rem
+  )
+);
+
+// Overview background rules
+$overview-background-rules: (
+   1: ( width: 0,         height: 0,        position: -2vh,    size: 51vh ),
+   2: ( width: 22.5em,    height: 0,        position: 5vh,     size: 41vh ),
+   3: ( width: 33.75em,   height: 0,        position: -5.5vh,  size: 57vh ),
+   4: ( width: 37.5em,    height: 0,        position: -1.5vh,  size: 51vh ),
+   5: ( width: 48em,      height: 0,        position: -3.5vh,  size: 55vh ),
+   6: ( width: 50em,      height: 0,        position: -0.5vh,  size: 50vh ),
+   7: ( width: 50.625em,  height: 0,        position: -4vh,    size: 55vh ),
+   8: ( width: 57em,      height: 0,        position: -2vh,    size: 52vh ),
+   9: ( width: 64em,      height: 0,        position: -1vh,    size: 50vh ),
+  10: ( width: 64em,      height: 42.5em,   position: 6vh,     size: 40vh ),
+  11: ( width: 80em,      height: 0,        position: -3.5vh,  size: 54vh ),
+  12: ( width: 80em,      height: 40.5em,   position: 0.5vh,   size: 48vh ),
+  14: ( width: 90em,      height: 0,        position: -2vh,    size: 52vh ),
+  15: ( width: 90em,      height: 51.25em,  position: 2.5vh,   size: 45vh ),
+  16: ( width: 96em,      height: 0,        position: -3vh,    size: 53vh ),
+  17: ( width: 96em,      height: 50em,     position: 2.5vh,   size: 45vh ),
+  18: ( width: 105em,     height: 0,        position: -0.5vh,  size: 50vh ),
+  19: ( width: 105em,     height: 62.5em,   position: 2vh,     size: 46vh ),
+  20: ( width: 120em,     height: 0,        position: -2.5vh,  size: 53vh ),
+  21: ( width: 120em,     height: 66em,     position: 0,       size: 49vh ),
+);
+
+// Overview width
+$overview-width: ( 0: 100vw, 64: 32.5vw );
+
+// Forecast & Conditions containers space
+$container-space: (
+      0: 1rem,
+   22.5: 1.5rem,
+  25.75: 1.75rem,
+  26.75: 2rem,
+   37.5: 2.5rem,
+   44.5: 3.5rem,
+     48: 3.875rem,
+     50: 4.25rem,
+     54: 4.75rem,
+     64: 1.75rem,
+     85: 2.5rem,
+     90: 3rem,
+     96: 3.5rem,
+    100: 4rem,
+    120: 4.75rem
+);
+
+// 'Container' width
+$container-width: ( 0: 100vw, 64: 67.5vw );
+
+// Forecast content columns size
+$forecast-content-cols-size: (
+      0: repeat(24, 22.75%),
+     30: repeat(24, 18%),
+  33.75: repeat(24, 15.2%),
+     50: repeat(24, 14.8%),
+     57: repeat(24, 11.185%),
+     80: repeat(24, 9.775%),
+     96: repeat(24, 8.65%)
+);
+
+// Forecast content gap size
+$forecast-content-gap: (
+      0: 3%,
+     30: 2.5%,
+  33.75: 1.75%,
+     50: 2.25%,
+     57: 1.5%
+);
+
+// Forecast cards icon width
+$forecast-card-icon-width: (
+      0: 14vw,
+     30: 11.25vw,
+  33.75: 10vw,
+   37.5: 9.5vw,
+   44.5: 9vw,
+     48: 8.5vw,
+     50: 8.25vw,
+     57: 6.5vw,
+     64: 4.75vw,
+     80: 4.25vw,
+     85: 4vw,
+     96: 3.5vw
+);
+
+// Conditions content columns size
+$conditions-content-cols-size: (
+      0: repeat(4, 48.35%),
+     30: repeat(4, 31.625%),
+  33.75: repeat(4, 32.15%),
+     50: repeat(4, 31.85%),
+     57: repeat(4, 23.87%),
+     80: repeat(5, 18.775%)
+);
+
+// Conditions content gap size
+$conditions-content-gap: (
+      0: 1.75vh 3%,
+   22.5: 1.5vh 3%,
+     30: 1.25vh 2.5%,
+  33.75: 1.5vh 1.75%,
+   37.5: 1.25vh 1.75%,
+     50: 1.5vh 2.25%,
+     57: 1.125vh 1.5%,
+     64: 1.875vh 1.5%,
+     80: 2.375vh 1.5%,
+     90: 2.125vh 1.5%,
+    105: 1.875vh 1.5%,
+    120: 2vh 1.5%,
+);
+
+// Conditions card aspect ratio
+$conditions-card-aspect-ratio: (
+        0: ( v1: 2, v2: 0.95 ),
+     30em: ( v1: 2, v2: 1.2 ),
+  33.75em: ( v1: 2, v2: 1.03 ),
+     48em: ( v1: 2, v2: 0.95 ),
+     57em: ( v1: 2, v2: 1 ),
+     90em: ( v1: 2, v2: 0.97 ),
+    120em: ( v1: 2, v2: 0.92 )
+);
+
+// Conditions card content width
+$conditions-card-content-width: (
+      0: 37vw,
+   22.5: 36vw,
+     30: auto,
+  33.75: 25.5vw,
+   37.5: 24vw,
+   44.5: 22.5vw,
+     50: 21.75vw,
+     57: 17.25vw,
+     64: 12vw,
+     80: 9.75vw,
+     96: 9.125vw
+);
+
+// Conditions card icon width
+$conditions-card-icon-width: (
+       0: 12.75vw,
+    22.5: 12.25vw,
+   33.75: 9.25vw,
+    37.5: 9vw,
+    44.5: 8.25vw,
+      48: 7.75vw,
+  50.625: 7.25vw,
+      57: 6.125vw,
+      64: 3.875vw,
+      80: 3.125vw,
+      96: 2.9vw,
+     100: 3vw,
+     105: 3.125vw,
+     120: 2.85vw,
+);

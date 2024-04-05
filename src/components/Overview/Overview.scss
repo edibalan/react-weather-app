@@ -1,0 +1,67 @@
+@use '../../utilities/variables' as *;
+@use '../../utilities/mixins' as *;
+@use '../../utilities/maps' as *;
+
+.overview {
+  @include createBreakpoints(min-width, $overview-width, width);
+  @include grid-container(space-between, center);
+  background-image: url('../../assets/day-background.webp');
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-block: 1.75vh;
+
+  // Set the size and position of Overview Background at different breakpoints
+  @each $key, $map in $overview-background-rules {
+    $width: map-get($map, 'width');
+    $height: map-get($map, 'height');
+    $position: map-get($map, 'position');
+    $size: map-get($map, 'size');
+
+    @media (min-width: $width) and (min-height: $height) {
+      background-position: center $position;
+      background-size: $size;
+    }
+  }
+
+  .city__selector {
+    @include grid-container(center, center, column);
+
+    input, .search__button {
+      border: 1px solid $black;
+      font-weight: $fw-sb;
+      letter-spacing: 0.02rem;
+    }
+
+    input {
+      background-color: transparent;
+      margin-right: 0.25rem;
+      outline: none;
+
+      &::placeholder {
+        color: $black;
+      }
+    }
+
+    .search__button {
+      cursor: pointer;
+      padding: 0.125rem 0.375rem;
+    }
+  }
+  
+  .temperature {
+    cursor: pointer;
+    margin-inline: auto;
+    padding-left: 1.5rem;
+    width: fit-content;
+
+    .unit {
+      font-weight: $fw-bd;
+    }
+  }
+
+  .overcast {
+    margin-inline: auto;
+    font-weight: $fw-sb;
+    width: 80%;
+  }
+}

@@ -1,0 +1,28 @@
+@use '../../../utilities/variables' as *;
+@use '../../../utilities/mixins' as *;
+@use '../../../utilities/maps' as *;
+
+.weather__conditions__content {
+  @include content-rules;
+  @include createBreakpoints(min-width, $conditions-content-cols-size, grid-template-columns);
+  @include createBreakpoints(min-width, $conditions-content-gap, gap);
+  @include grid-container(center, start, column);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 2.25vh auto 0;
+
+  // HEIGHT >= 700px
+  @media (min-height: 43.75em) and (orientation: portrait) {
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  // WIDTH >= 600px & WIDTH <= 910px & HEIGHT >= 960px
+  @media (min-width: 37.5em)
+   and (max-width: 56.875em)
+   and (min-height: 60em)
+   and (orientation: portrait)
+  {
+      grid-template-rows: repeat(4, 1fr);
+      overflow: hidden;
+      padding-bottom: 0;
+  }
+}

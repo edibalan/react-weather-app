@@ -1,0 +1,35 @@
+@use '../../utilities/variables' as *;
+@use '../../utilities/mixins' as *;
+@use '../../utilities/maps' as *;
+
+.container {
+  background-image: linear-gradient($blue-100, $blue-300);
+  height: 100vh;
+  @include createBreakpoints(min-width, $container-width, width);
+  @include grid-container(space-around);
+
+  @media (orientation: landscape) {
+    background-image: linear-gradient(90deg, $blue-100, $blue-300);
+  }
+
+  .forecast, .weather__conditions {
+    @include createBreakpoints(min-width, $container-space, padding-inline);
+    @include createBreakpoints(min-width, $container-width, width);
+  }
+  
+  .forecast__title, .weather__conditions__title {
+    font-weight: $fw-sb;
+  }
+
+  &.night-mode {
+    background-image: linear-gradient(#1C2657, #3F81CC);
+    
+    @media (orientation: landscape) {
+      background-image: linear-gradient(90deg, #1C2657, #3F81CC);
+    }
+
+    h2 {
+      color: $white;
+    }
+  }
+}
